@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chamber of Commerce of Bogota" />
+    <meta name="author" content="William Melo" />
+    <title>Bogota Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Bogota Chamber of Commerce" />
+        <div class="title">
+          <h1>Bogotá</h1>
+          <p>Chamber of Commerce</p>
+        </div>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Discover</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <button class="theme-toggle" aria-label="Toggle dark mode">●</button>
+        <button class="menu-toggle" aria-label="Toggle dark mode">≡</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img
+        src="images/banner.webp"
+        alt="Timbuktu scenic view"
+        class="hero-image"
+      />
+      <a href="#" class="keynote-button">Keynote Tickets</a>
+    </section>
+
+    <main>
+      <h2>Directory</h2>
+
+      <div class="info-panels">
+        <section class="panel">
+          <button id="grid-view" class="button">Grid</button>
+          <button id="list-view" class="button">List</button>
+        </section>
+      </div>
+
+      <div id="cards" class="grid"></div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h3>Bogota Chamber of Commerce</h3>
+          <p>Ave. Caracas Cra 24 B</p>
+          <p>Bogota, Colombia</p>
+          <p>info@bogotacoc.org</p>
+          <p>(677) 126-4500</p>
+        </div>
+
+        <div class="social-media">
+          <a href="#" class="social-icon youtube">
+            <img src="images/youtube.png" alt="YouTube" />
+          </a>
+          <a href="#" class="social-icon twitter">
+            <img src="images/twitter.png" alt="Twitter" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <p>WDD231 Class Project</p>
+        <p>William Melo</p>
+        <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastUpdated"></span></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Bazical Cloud Technology",
+      "address": "Calle 100 #8A-55, Bogotá, Colombia",
+      "phone_number": "+57 1 5551234",
+      "website_url": "https://www.bazical.com",
+      "image_file_name": "bazical_logo.png",
+      "membership_level": 3,
+      "status": "Active"
+    },
+    {
+      "name": "Helicol S.A.",
+      "address": "Aeropuerto Internacional El Dorado, Bogotá, Colombia",
+      "phone_number": "+57 1 4145500",
+      "website_url": "https://www.helicol.com.co",
+      "image_file_name": "helicol_logo.png",
+      "membership_level": 2,
+      "status": "Active"
+    },
+    {
+      "name": "Expreso Bolivariano",
+      "address": "Calle 13 #60-80, Bogotá, Colombia",
+      "phone_number": "+57 1 4249090",
+      "website_url": "https://www.bolivariano.com.co",
+      "image_file_name": "bolivariano_logo.png",
+      "membership_level": 1,
+      "status": "Inactive"
+    },
+    {
+      "name": "TransMilenio S.A.",
+      "address": "Av. El Dorado #69-76, Bogotá, Colombia",
+      "phone_number": "+57 1 2203000",
+      "website_url": "https://www.transmilenio.gov.co",
+      "image_file_name": "transmilenio_logo.png",
+      "membership_level": 3,
+      "status": "Active"
+    },
+    {
+      "name": "Alpina Productos Alimenticios S.A.",
+      "address": "Autopista Norte Km 18, Sopó, Cundinamarca, Colombia",
+      "phone_number": "+57 1 8758000",
+      "website_url": "https://www.alpina.com.co",
+      "image_file_name": "alpina_logo.png",
+      "membership_level": 2,
+      "status": "Active"
+    },
+    {
+      "name": "Grupo Aval Acciones y Valores S.A.",
+      "address": "Calle 16 #9-55, Bogotá, Colombia",
+      "phone_number": "+57 1 2419700",
+      "website_url": "https://www.grupoaval.com",
+      "image_file_name": "grupoaval_logo.png",
+      "membership_level": 3,
+      "status": "Inactive"
+    },
+    {
+      "name": "Bavaria S.A.",
+      "address": "Carrera 53 #100-51, Bogotá, Colombia",
+      "phone_number": "+57 1 6510000",
+      "website_url": "https://www.bavaria.co",
+      "image_file_name": "bavaria_logo.png",
+      "membership_level": 2,
+      "status": "Active"
+    }
+  ]
+}
