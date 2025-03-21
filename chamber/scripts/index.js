@@ -186,7 +186,12 @@ async function loadSpotlightCompanies() {
   if (companies.length > 0) {
     spotlightCompanies.innerHTML = ""; // Limpia antes de agregar contenido
 
-    companies.slice(0, 3).forEach((company) => {
+    // Mezclar aleatoriamente las empresas y seleccionar las primeras 3
+    const randomCompanies = companies
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+
+    randomCompanies.forEach((company) => {
       spotlightCompanies.innerHTML += `
         <div class="spotlight-card">
           <img

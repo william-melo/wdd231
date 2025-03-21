@@ -277,7 +277,6 @@ main h2 {
   background-color: #f8f8f8;
   border-radius: 8px;
   padding: 25px;
-  
 }
 
 .cta-container h3 {
@@ -751,6 +750,15 @@ footer {
   }
   #check:checked ~ .menu {
     right: 0;
+  }
+  .hero-overlay h1 {
+    padding-top: 20x;
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    padding-top: 20x;
+    font-size: 1rem;
   }
 }
 
