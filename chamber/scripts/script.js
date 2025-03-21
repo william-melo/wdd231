@@ -7,20 +7,20 @@ lastUpdated.innerHTML = document.lastModified;
 
 // Fetch data from members.json and populate the table
 
-const path = "data/members.json";
+const pathMembers = "data/members.json";
 
 const getData = async (filePath) => {
   try {
     const response = await fetch(filePath);
     const data = await response.json();
-    console.table(data.members);
+
     displayBusinesses(data.members);
   } catch (error) {
     console.log(error);
   }
 };
 
-getData(path);
+getData(pathMembers);
 
 const cards = document.querySelector("#cards");
 
@@ -88,3 +88,23 @@ const displayBusinesses = (business) => {
     cards.appendChild(card);
   });
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener la URL de la página actual
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Seleccionar todos los enlaces del menú
+  const navLinks = document.querySelectorAll(".nav-bar a");
+
+  navLinks.forEach((link) => {
+    // Obtener el href del enlace
+    const linkHref = link.getAttribute("href");
+
+    // Comparar con la página actual
+    if (linkHref === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chamber of Commerce of Bogota" />
+    <meta name="author" content="William Melo" />
+    <title>Bogota Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li class="logo">
+            <a href="index.html"
+              ><img
+                src="./images/logo.png"
+                width="50px"
+                height="50px"
+                alt="Bogota Chamber of Commerce"
+            /></a>
+            <span>Bogota Chamber of Commerce</span>
+          </li>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </span>
+          <label for="check" class="open-menu">
+            <i class="fas fa-bars"></i>
+          </label>
+        </ul>
+      </nav>
+
+      <!-- <div class="header-controls">
+        <button class="theme-toggle" aria-label="Toggle dark mode">●</button>
+        <button class="menu-toggle" aria-label="Toggle dark mode">≡</button>
+      </div> -->
+    </header>
+
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Welcome to the Bogotá Chamber of Commerce</h1>
+        <p>
+          Promoting business growth and development in the Colombian capital
+          since 1978.
+        </p>
+      </div>
+      <img
+        src="images/baner.avif"
+        alt="Cámara de Comercio de Bogotá"
+        class="hero-image"
+      />
+      <a href="#" class="keynote-button">Keynote Tickets</a>
+    </section>
+
+    <main>
+      <div class="main-content">
+        <!-- Sección de bienvenida -->
+        <section class="welcome-section">
+          <div class="cta-container">
+            <h3>Ready to grow your business?</h3>
+            <p>
+              Join our network of over 10,000 business owners and entrepreneurs
+            </p>
+            <a href="#" class="cta-button">Join the Chamber</a>
+          </div>
+        </section>
+
+        <!-- Sección de eventos actuales -->
+        <section class="events-section">
+          <h2>Featured Events</h2>
+          <div class="event-cards">
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">15</span>
+                <span class="month">APR</span>
+              </div>
+              <div class="event-details">
+                <h3>Business Fair 2025</h3>
+                <p class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> Ágora Convention Center
+                </p>
+                <p class="event-time">
+                  <i class="fas fa-clock"></i> 08:00 - 18:00
+                </p>
+                <p class="event-description">
+                  Connect with local entrepreneurs and expand your network of
+                  professional contacts.
+                </p>
+                <a href="#" class="event-link">More information</a>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">22</span>
+                <span class="month">APR</span>
+              </div>
+              <div class="event-details">
+                <h3>Digital Innovation Workshop</h3>
+                <p class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> Chapinero Headquarters
+                </p>
+                <p class="event-time">
+                  <i class="fas fa-clock"></i> 14:00 - 17:00
+                </p>
+                <p class="event-description">
+                  Learn strategies to implement digital technologies in your
+                  business.
+                </p>
+                <a href="#" class="event-link">More information</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="view-all-link"
+            >See all the events <i class="fas fa-arrow-right"></i
+          ></a>
+        </section>
+
+        <section class="weather-section">
+          <div class="weather-container">
+            <h2 class="weather-city">Bogotá Weather</h2>
+            <div class="weather-info">
+              <div class="weather-icon">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+              <div class="weather-data">
+                <div class="temperature"></div>
+                <div class="condition"></div>
+                <div class="details">
+                  <span><i class="fas fa-tint"></i> </span>
+                  <span><i class="fas fa-wind"></i> </span>
+                </div>
+              </div>
+            </div>
+            <p class="weather-forecast"></p>
+          </div>
+
+          <div class="business-stats">
+            <h3>Indicadores Económicos</h3>
+            <ul class="stats-list">
+              <li><span class="stat-label"></span></li>
+              <li><span class="stat-label"></span></li>
+              <li>
+                <span class="stat-label"></span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Sección de spotlights de empresas -->
+        <section class="spotlights-section">
+          <h2>Empresas Destacadas</h2>
+          <div class="spotlight-container"></div>
+          <p class="join-spotlight">
+            ¿Quieres destacar tu empresa aquí? <a href="#">Contáctanos</a>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h3>Bogota Chamber of Commerce</h3>
+          <p>Ave. Caracas Cra 24 B</p>
+          <p>Bogota, Colombia</p>
+          <p>info@bogotacoc.org</p>
+          <p>(677) 126-4500</p>
+        </div>
+
+        <div class="social-media">
+          <a href="#" class="social-icon youtube">
+            <img src="images/youtube.png" alt="YouTube" />
+          </a>
+          <a href="#" class="social-icon twitter">
+            <img src="images/twitter.png" alt="Twitter" />
+          </a>
+          <a href="#" class="social-icon linkedin">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <p>WDD231 Class Project</p>
+        <p>William Melo</p>
+        <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastUpdated"></span></p>
+      </div>
+    </footer>
+  </body>
+</html>

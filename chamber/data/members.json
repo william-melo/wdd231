@@ -7,7 +7,8 @@
       "website_url": "https://www.bazical.com",
       "image_file_name": "bazical_logo.png",
       "membership_level": 3,
-      "status": "Active"
+      "status": "Active",
+      "slogan": "Innovación en la nube para el futuro digital."
     },
     {
       "name": "Helicol S.A.",
@@ -16,7 +17,8 @@
       "website_url": "https://www.helicol.com.co",
       "image_file_name": "helicol_logo.png",
       "membership_level": 2,
-      "status": "Active"
+      "status": "Active",
+      "slogan": "Tu seguridad en el aire, nuestra prioridad."
     },
     {
       "name": "Expreso Bolivariano",
@@ -25,7 +27,8 @@
       "website_url": "https://www.bolivariano.com.co",
       "image_file_name": "bolivariano_logo.png",
       "membership_level": 1,
-      "status": "Inactive"
+      "status": "Inactive",
+      "slogan": "Conectamos destinos, creamos experiencias."
     },
     {
       "name": "TransMilenio S.A.",
@@ -34,7 +37,8 @@
       "website_url": "https://www.transmilenio.gov.co",
       "image_file_name": "transmilenio_logo.png",
       "membership_level": 3,
-      "status": "Active"
+      "status": "Active",
+      "slogan": "Moviendo a Bogotá con eficiencia."
     },
     {
       "name": "Alpina Productos Alimenticios S.A.",
@@ -43,7 +47,8 @@
       "website_url": "https://www.alpina.com.co",
       "image_file_name": "alpina_logo.png",
       "membership_level": 2,
-      "status": "Active"
+      "status": "Active",
+      "slogan": "Nutrición y sabor para tu día a día."
     },
     {
       "name": "Grupo Aval Acciones y Valores S.A.",
@@ -52,7 +57,8 @@
       "website_url": "https://www.grupoaval.com",
       "image_file_name": "grupoaval_logo.png",
       "membership_level": 3,
-      "status": "Inactive"
+      "status": "Inactive",
+      "slogan": "Soluciones financieras para un mejor futuro."
     },
     {
       "name": "Bavaria S.A.",
@@ -61,7 +67,8 @@
       "website_url": "https://www.bavaria.co",
       "image_file_name": "bavaria_logo.png",
       "membership_level": 2,
-      "status": "Active"
+      "status": "Active",
+      "slogan": "Brindamos momentos inolvidables."
     }
   ]
 }
