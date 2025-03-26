@@ -1,3 +1,61 @@
+(function () {
+  // Function to safely add event listeners
+  function safeAddEventListener() {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const currentPath = window.location.pathname;
+
+    // Check if elements exist before adding listeners
+    if (!hamburger || !navLinks) {
+      console.error("Navigation elements not found");
+      return;
+    }
+
+    // Wayfinding - Highlight current page
+    const navItems = document.querySelectorAll(".nav-links a");
+    navItems.forEach((item) => {
+      // Remove leading and trailing slashes for comparison
+      const cleanPath = currentPath.replace(/^\/|\/$/g, "");
+      const cleanHref = item.getAttribute("href").replace(/^\/|\/$/g, "");
+
+      // Check if current path matches link href
+      if (
+        cleanPath === cleanHref ||
+        (cleanPath === "" && cleanHref === "home")
+      ) {
+        item.classList.add("active");
+      }
+    });
+
+    // Hamburger menu toggle
+    hamburger.addEventListener("click", function () {
+      // Use 'this' to ensure we're using the clicked element
+      this.classList.toggle("active");
+      navLinks.classList.toggle("active");
+
+      // Toggle aria-expanded attribute
+      const isExpanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!isExpanded));
+    });
+
+    // Close menu when a link is clicked
+    navItems.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Different methods to ensure DOM is loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", safeAddEventListener);
+  } else {
+    safeAddEventListener();
+  }
+})();
+
 const pathMembers = "data/members.json";
 
 window.addEventListener("pagehide", () => {
@@ -16,26 +74,6 @@ const getData = async (filePath) => {
     console.log(error);
   }
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtener la URL de la página actual
-  const currentPage = window.location.pathname.split("/").pop();
-
-  // Seleccionar todos los enlaces del menú
-  const navLinks = document.querySelectorAll(".nav-bar a");
-
-  navLinks.forEach((link) => {
-    // Obtener el href del enlace
-    const linkHref = link.getAttribute("href");
-
-    // Comparar con la página actual
-    if (linkHref === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-});
 
 const year = new Date().getFullYear();
 const copyright = document.querySelector("#copyright");

@@ -26,27 +26,31 @@ img {
   height: auto;
 }
 
-/* Header 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+.title h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
+.title p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
-.logo-container img {
-  width: auto;
-  height: 50px;
-  margin-right: 10px;
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
 }
-*/
+
+.desktop-nav ul li {
+  margin-left: 1.5rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -72,7 +76,7 @@ header {
 .brand-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--color2)
+  color: var(--color2);
 }
 
 /* Navigation styles */
@@ -115,7 +119,7 @@ header {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color:var(--color4);
+  background-color: var(--color4);
   animation: underline 0.3s ease forwards;
 }
 
@@ -292,6 +296,14 @@ main h2 {
   background-color: #f8f8f8;
   border-radius: 8px;
   padding: 25px;
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cta-container h2 {
@@ -318,283 +330,73 @@ main h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Sección de eventos */
-.events-section {
+/* Sección de gracias */
+
+.thank-you-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
   background-color: #fff;
-  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.events-section h2 {
+.submission-details {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.submission-details h2 {
   color: var(--color1);
-  margin-bottom: 20px;
   border-bottom: 2px solid #f8b500;
   padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.event-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.event-card {
+.detail-item {
   display: flex;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.event-date {
-  background-color: var(--color1);
-  color: white;
-  padding: 15px 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 80px;
-}
-
-.event-date .day {
-  font-size: 1.8rem;
+.detail-label {
+  flex: 0 0 200px;
   font-weight: bold;
-  line-height: 1;
+  color: var(--color1);
 }
 
-.event-date .month {
-  font-size: 1rem;
-}
-
-.event-details {
-  padding: 15px;
+.detail-value {
   flex: 1;
 }
 
-.event-details h3 {
-  margin: 0 0 10px 0;
-  color: #333;
-}
-
-.event-location,
-.event-time {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 5px 0;
-}
-
-.event-description {
-  margin: 10px 0;
-  font-size: 0.95rem;
-}
-
-.event-link {
-  display: inline-block;
-  color: var(--color1);
-  font-weight: bold;
-  text-decoration: underline;
-  margin-top: 10px;
-}
-
-.view-all-link {
-  display: block;
-  text-align: right;
-  margin-top: 15px;
-  color: var(--color1);
-  font-weight: bold;
-}
-
-/* Sección del clima */
-.weather-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.weather-container,
-.business-stats {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.weather-container h2,
-.business-stats h3 {
-  color: var(--color1);
-  margin-bottom: 15px;
-  border-bottom: 2px solid #f8b500;
-  padding-bottom: 8px;
-}
-
-.weather-info {
-  display: flex;
-  align-items: center;
-  margin: 15px 0;
-}
-
-.weather-icon {
-  font-size: 3rem;
-  color: #f8b500;
-  margin-right: 20px;
-}
-
-.temperature {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.condition {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.details {
-  display: flex;
-  gap: 15px;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.weather-forecast {
-  margin-top: 15px;
-  font-style: italic;
-  color: #666;
-}
-
-.stats-list {
-  list-style: none;
-  padding: 0;
-}
-
-.stats-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.stat-label {
-  font-weight: bold;
-  color: #333;
-  margin-right: 5px;
-}
-
-/* Sección de spotlights */
-.spotlights-section {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.spotlights-section h2 {
+.thank-you-message {
+  text-align: center;
   color: var(--color1);
   margin-bottom: 20px;
-  border-bottom: 2px solid #f8b500;
-  padding-bottom: 10px;
 }
 
-.spotlight-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.spotlight-card {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.spotlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.spotlight-logo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  padding: 5px;
-  border: 2px solid #eee;
-}
-
-.spotlight-tag {
-  background-color: #f1f1f1;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin: 10px 0;
-}
-
-.spotlight-description {
-  font-style: italic;
-  margin: 10px 0;
-  color: #666;
-}
-
-.spotlight-contact {
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-.spotlight-contact p {
-  margin: 5px 0;
-}
-
-.join-spotlight {
+.return-link {
+  display: block;
   text-align: center;
   margin-top: 20px;
-  font-style: italic;
+  padding: 10px 20px;
+  background-color: #f8b500;
+  color: #333;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.join-spotlight a {
-  color: var(--color1);
-  font-weight: bold;
+.return-link:hover {
+  background-color: var(--color1);
+  color: white;
 }
-
-/* Media query para responsive */
-@media (max-width: 768px) {
-  .event-cards,
-  .spotlight-container {
-    grid-template-columns: 1fr;
-  }
-
-  .weather-section {
-    grid-template-columns: 1fr;
-  }
-
-  .event-card {
-    flex-direction: column;
-  }
-
-  .event-date {
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  .event-date .day {
-    margin-right: 5px;
-  }
-
-  .event-date .month {
-    align-self: flex-end;
-  }
-}
+/* __________________________________________ */
 
 /* Modo oscuro */
 body.dark-mode .welcome-section,
@@ -737,6 +539,44 @@ footer {
   right: 20px;
   font-size: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 610px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color3);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  .hero-overlay h1 {
+    padding-top: 20x;
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    padding-top: 20x;
+    font-size: 1rem;
+  }
 }
 
 /* Media Queries para Responsive */

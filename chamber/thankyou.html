@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chamber of Commerce of Bogota" />
+    <meta
+      name="description"
+      content="Bogota Chamber of Commerce - Thank You Page"
+    />
     <meta name="author" content="William Melo" />
-    <title>Bogota Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <title>Thank You - Bogota Chamber of Commerce</title>
+
+    <link rel="stylesheet" href="styles/thankyou.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,13 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="scripts/script.js" defer></script>
+    <script type="module" src="scripts/thankyou.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="logo-container">
         <div class="logo">
-          <img src="images/logo.png" alt="" />
+          <img src="images/logo.png" alt="" width="50px" height="50px" />
         </div>
         <span class="brand-name">Bogotá Chamber of Commerce</span>
       </div>
@@ -45,34 +48,20 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-overlay">
-        <h1>Discover the heartbeat of Bogota’s business community.</h1>
-        <p>
-          Our directory is a comprehensive guide to the vibrant, innovative
-          companies that drive economic growth and prosperity in Colombia’s
-          capital.
-        </p>
-      </div>
-      <img
-        src="images/baner.avif"
-        alt="Cámara de Comercio de Bogotá"
-        class="hero-image"
-      />
-      <a href="#" class="keynote-button">Keynote Tickets</a>
-    </section>
-
     <main>
-      <h2>Directory</h2>
+      <div class="thank-you-container">
+        <div class="thank-you-message">
+          <h1>Thank You for Joining!</h1>
+          <p>We appreciate your interest in the Bogota Chamber of Commerce.</p>
+        </div>
 
-      <div class="info-panels">
-        <section class="panel">
-          <button id="grid-view" class="button">Grid</button>
-          <button id="list-view" class="button">List</button>
-        </section>
+        <div class="submission-details">
+          <h2>Your Submission Details</h2>
+          <div id="detailsContainer"></div>
+        </div>
+
+        <a href="index.html" class="return-link">Return to Home</a>
       </div>
-
-      <div id="cards" class="grid"></div>
     </main>
 
     <footer>
