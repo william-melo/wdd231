@@ -3,7 +3,9 @@
   function safeAddEventListener() {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
-    const currentPath = window.location.pathname;
+
+    // Get current page filename
+    const currentPage = window.location.pathname.split("/").pop();
 
     // Check if elements exist before adding listeners
     if (!hamburger || !navLinks) {
@@ -14,14 +16,13 @@
     // Wayfinding - Highlight current page
     const navItems = document.querySelectorAll(".nav-links a");
     navItems.forEach((item) => {
-      // Remove leading and trailing slashes for comparison
-      const cleanPath = currentPath.replace(/^\/|\/$/g, "");
-      const cleanHref = item.getAttribute("href").replace(/^\/|\/$/g, "");
+      // Get the href attribute
+      const href = item.getAttribute("href");
 
-      // Check if current path matches link href
+      // Check if href matches current page or is default
       if (
-        cleanPath === cleanHref ||
-        (cleanPath === "" && cleanHref === "home")
+        href === currentPage ||
+        (currentPage === "" && href === "index.html")
       ) {
         item.classList.add("active");
       }

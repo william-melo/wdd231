@@ -5,7 +5,6 @@ copyright.innerHTML = `&copy;${year}`;
 const lastUpdated = document.querySelector("#lastUpdated");
 lastUpdated.innerHTML = document.lastModified;
 
-
 document.addEventListener("DOMContentLoaded", () => {
   // Function to get URL parameters
   const getUrlParameter = (name) => {
@@ -49,3 +48,62 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(function () {
+  // Function to safely add event listeners
+  function safeAddEventListener() {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Get current page filename
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Check if elements exist before adding listeners
+    if (!hamburger || !navLinks) {
+      console.error("Navigation elements not found");
+      return;
+    }
+
+    // Wayfinding - Highlight current page
+    const navItems = document.querySelectorAll(".nav-links a");
+    navItems.forEach((item) => {
+      // Get the href attribute
+      const href = item.getAttribute("href");
+
+      // Check if href matches current page or is default
+      if (
+        href === currentPage ||
+        (currentPage === "" && href === "index.html")
+      ) {
+        item.classList.add("active");
+      }
+    });
+
+    // Hamburger menu toggle
+    hamburger.addEventListener("click", function () {
+      // Use 'this' to ensure we're using the clicked element
+      this.classList.toggle("active");
+      navLinks.classList.toggle("active");
+
+      // Toggle aria-expanded attribute
+      const isExpanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!isExpanded));
+    });
+
+    // Close menu when a link is clicked
+    navItems.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Different methods to ensure DOM is loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", safeAddEventListener);
+  } else {
+    safeAddEventListener();
+  }
+})();
