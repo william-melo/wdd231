@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chamber of Commerce of Bogota" />
-    <meta name="author" content="William Melo" />
-    <title>Bogota Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script type="module" src="scripts/script.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="logo-container">
-        <div class="logo">
-          <img src="images/logo.png" alt="" />
-        </div>
-        <span class="brand-name">Bogotá Chamber of Commerce</span>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Chamber of Commerce of Bogota" />
+        <meta name="author" content="William Melo" />
+        <title>Bogota Chamber of Commerce</title>
+        <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script type="module" src="scripts/script.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="" />
+                </div>
+                <span class="brand-name">Bogotá Chamber of Commerce</span>
+            </div>
 
-      <nav class="nav-menu">
-        <button
-          class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html" data-page="home">Home</a></li>
-          <li><a href="directory.html" data-page="about">Directory</a></li>
-          <li><a href="join.html" data-page="services">Join</a></li>
-          <li><a href="#" data-page="contact">Discover</a></li>
-        </ul>
-      </nav>
-    </header>
+            <nav class="nav-menu">
+                <button
+                    class="hamburger"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-page="home">Home</a></li>
+                    <li>
+                        <a href="directory.html" data-page="about">Directory</a>
+                    </li>
+                    <li><a href="join.html" data-page="services">Join</a></li>
+                    <li>
+                        <a href="discover.html" data-page="contact">Discover</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <section class="hero">
-      <div class="hero-overlay">
-        <h1>Discover the heartbeat of Bogota’s business community.</h1>
-        <p>
-          Our directory is a comprehensive guide to the vibrant, innovative
-          companies that drive economic growth and prosperity in Colombia’s
-          capital.
-        </p>
-      </div>
-      <img
-        src="images/baner.avif"
-        alt="Cámara de Comercio de Bogotá"
-        class="hero-image"
-      />
-      <a href="#" class="keynote-button">Keynote Tickets</a>
-    </section>
-
-    <main>
-      <h2>Directory</h2>
-
-      <div class="info-panels">
-        <section class="panel">
-          <button id="grid-view" class="button">Grid</button>
-          <button id="list-view" class="button">List</button>
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Discover the heartbeat of Bogota’s business community.</h1>
+                <p>
+                    Our directory is a comprehensive guide to the vibrant,
+                    innovative companies that drive economic growth and
+                    prosperity in Colombia’s capital.
+                </p>
+            </div>
+            <img
+                src="images/baner.avif"
+                alt="Cámara de Comercio de Bogotá"
+                class="hero-image"
+            />
+            <a href="#" class="keynote-button">Keynote Tickets</a>
         </section>
-      </div>
 
-      <div id="cards" class="grid"></div>
-    </main>
+        <main>
+            <h2>Directory</h2>
 
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <h3>Bogota Chamber of Commerce</h3>
-          <p>Ave. Caracas Cra 24 B</p>
-          <p>Bogota, Colombia</p>
-          <p>info@bogotacoc.org</p>
-          <p>(677) 126-4500</p>
-        </div>
+            <div class="info-panels">
+                <section class="panel">
+                    <button id="grid-view" class="button">Grid</button>
+                    <button id="list-view" class="button">List</button>
+                </section>
+            </div>
 
-        <div class="social-media">
-          <a href="#" class="social-icon youtube">
-            <img src="images/youtube.png" alt="YouTube" />
-          </a>
-          <a href="#" class="social-icon twitter">
-            <img src="images/twitter.png" alt="Twitter" />
-          </a>
-          <a href="#" class="social-icon linkedin">
-            <img src="images/linkedin.png" alt="LinkedIn" />
-          </a>
-        </div>
-      </div>
+            <div id="cards" class="grid"></div>
+        </main>
 
-      <div class="project-info">
-        <p>WDD231 Class Project</p>
-        <p>William Melo</p>
-        <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
-        <p>Last Modification: <span id="lastUpdated"></span></p>
-      </div>
-    </footer>
-  </body>
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Bogota Chamber of Commerce</h3>
+                    <p>Ave. Caracas Cra 24 B</p>
+                    <p>Bogota, Colombia</p>
+                    <p>info@bogotacoc.org</p>
+                    <p>(677) 126-4500</p>
+                </div>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon youtube">
+                        <img src="images/youtube.webp" alt="YouTube" />
+                    </a>
+                    <a href="#" class="social-icon twitter">
+                        <img src="images/twitter.webp" alt="Twitter" />
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <img src="images/linkedin.webp" alt="LinkedIn" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <p>WDD231 Class Project</p>
+                <p>William Melo</p>
+                <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastUpdated"></span></p>
+            </div>
+        </footer>
+    </body>
 </html>

@@ -3,14 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Bogota Chamber of Commerce - Thank You Page"
-        />
+        <meta name="description" content="Chamber of Commerce of Bogota" />
         <meta name="author" content="William Melo" />
-        <title>Thank You - Bogota Chamber of Commerce</title>
+        <title>Bogota Chamber of Commerce</title>
 
-        <link rel="stylesheet" href="styles/thankyou.css" />
+        <link rel="stylesheet" href="styles/discover.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -18,18 +15,13 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <script type="module" src="scripts/thankyou.js" defer></script>
+        <script type="module" src="scripts/discover.js" defer></script>
     </head>
     <body>
         <header class="site-header">
             <div class="logo-container">
                 <div class="logo">
-                    <img
-                        src="images/logo.png"
-                        alt=""
-                        width="50px"
-                        height="50px"
-                    />
+                    <img src="images/logo.png" alt="" />
                 </div>
                 <span class="brand-name">Bogotá Chamber of Commerce</span>
             </div>
@@ -57,23 +49,27 @@
             </nav>
         </header>
 
-        <main>
-            <div class="thank-you-container">
-                <div class="thank-you-message">
-                    <h1>Thank You for Joining!</h1>
-                    <p>
-                        We appreciate your interest in the Bogota Chamber of
-                        Commerce.
-                    </p>
-                </div>
-
-                <div class="submission-details">
-                    <h2>Your Submission Details</h2>
-                    <div id="detailsContainer"></div>
-                </div>
-
-                <a href="index.html" class="return-link">Return to Home</a>
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Welcome to the Bogotá Chamber of Commerce</h1>
+                <p>
+                    Promoting business growth and development in the Colombian
+                    capital since 1978.
+                </p>
             </div>
+            <img
+                src="images/baner.avif"
+                alt="Cámara de Comercio de Bogotá"
+                class="hero-image"
+            />
+        </section>
+
+        <main>
+            <aside class="sidebar">
+                <h2>Visit Information</h2>
+                <p id="visit-message">Loading visit information...</p>
+            </aside>
+            <div class="discover-grid"></div>
         </main>
 
         <footer>

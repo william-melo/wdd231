@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Museo del Oro",
+        "address": "Cra. 6 #15-88, La Candelaria, Bogotá",
+        "description": "Explore the world's largest collection of pre-Hispanic gold artifacts, showcasing the rich history and craftsmanship of Colombia's indigenous cultures.",
+        "image": "images/1.webp"
+    },
+    {
+        "name": "Cerro de Monserrate",
+        "address": "Eastern Hills, Bogotá (Access via Funicular/Teleférico)",
+        "description": "Ascend this iconic mountain for breathtaking panoramic views of Bogotá and visit the historic sanctuary at its peak. A must-see for any visitor.",
+        "image": "images/2.webp"
+    },
+    {
+        "name": "La Candelaria",
+        "address": "Historic Center, Bogotá",
+        "description": "Wander through the cobblestone streets of Bogotá's oldest neighborhood, admiring colonial architecture, vibrant street art, and numerous cultural sites.",
+        "image": "images/3.webp"
+    },
+    {
+        "name": "Plaza de Bolívar",
+        "address": "Cra. 7 #11-10, La Candelaria, Bogotá",
+        "description": "The main square of Bogotá, surrounded by significant government buildings and the Primary Cathedral. A central point for understanding Colombian history.",
+        "image": "images/4.webp"
+    },
+    {
+        "name": "Museo Botero",
+        "address": "Cl. 11 #4-41, La Candelaria, Bogotá",
+        "description": "Enjoy the unique 'Boterismo' style at this museum showcasing works donated by Fernando Botero, alongside pieces from his personal international collection.",
+        "image": "images/5.webp"
+    },
+    {
+        "name": "Jardín Botánico José Celestino Mutis",
+        "address": "Av. Cl. 63 #68-95, Barrios Unidos, Bogotá",
+        "description": "Discover Colombia's incredible biodiversity in this expansive botanical garden, featuring flora from various regions like the Andes and the Amazon.",
+        "image": "images/6.webp"
+    },
+    {
+        "name": "Teatro Colón",
+        "address": "Cl. 10 #5-32, La Candelaria, Bogotá",
+        "description": "Experience world-class performances in Colombia's majestic national theatre, an architectural jewel known for its stunning interior and rich history.",
+        "image": "images/7.webp"
+    },
+    {
+        "name": "Usaquén Flea Market",
+        "address": "Usaquén neighborhood, Bogotá (Sundays)",
+        "description": "Explore the vibrant Sunday flea market in the charming Usaquén district, offering artisan crafts, food, and a lively atmosphere.",
+        "image": "images/8.webp"
+    }
+]

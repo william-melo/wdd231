@@ -1,306 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Chamber of Commerce of Bogota - Join Page"
-    />
-    <meta name="author" content="William Melo" />
-    <title>Bogota Chamber of Commerce</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Chamber of Commerce of Bogota - Join Page"
+        />
+        <meta name="author" content="William Melo" />
+        <title>Bogota Chamber of Commerce</title>
 
-    <link rel="stylesheet" href="styles/join.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script type="module" src="scripts/join.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="logo-container">
-        <div class="logo">
-          <img src="images/logo.png" alt="" />
-        </div>
-        <span class="brand-name">Bogotá Chamber of Commerce</span>
-      </div>
-
-      <nav class="nav-menu">
-        <button
-          class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html" data-page="home">Home</a></li>
-          <li><a href="directory.html" data-page="about">Directory</a></li>
-          <li><a href="join.html" data-page="services">Join</a></li>
-          <li><a href="#" data-page="contact">Discover</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="hero-overlay">
-        <h1>Join the Bogotá Chamber of Commerce</h1>
-        <p>
-          Grow your business and connect with a thriving network of
-          entrepreneurs. Become a member today and access exclusive
-          opportunities for development and success.
-        </p>
-      </div>
-      <img
-        src="images/baner.avif"
-        alt="Cámara de Comercio de Bogotá"
-        class="hero-image"
-      />
-    </section>
-
-    <main>
-      <div class="main-content">
-        <!-- Sección de bienvenida -->
-        <section class="welcome-section">
-          <div class="cta-container">
-            <h2>Unlock New Opportunities!</h2>
-            <p>
-              Become part of a thriving network of over 10,000 business leaders.
-              Join the Chamber today and take your business to the next level!
-              🚀
-            </p>
-            <a href="#registration-form" class="cta-button"
-              >Fill out the registration form</a
-            >
-          </div>
-        </section>
-
-        <!-- Sección de eventos actuales -->
-        <section class="events-section">
-          <div class="membership-section">
-            <form action="thankyou.html" method="get" id="registration-form">
-              <!-- Existing form inputs from original document -->
-              <label for="first-name">First Name:</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                autocomplete="given-name"
-                required
-                title="Please enter your first name."
-              />
-
-              <label for="last-name">Last Name:</label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                autocomplete="family-name"
-                required
-                title="Please enter your last name."
-              />
-
-              <label for="title">Organizational Title:</label>
-              <input
-                type="text"
-                id="title"
-                name="title"
-                autocomplete="organization-title"
-                pattern="[A-Za-z\- ]{7,}"
-                required
-                title="Only letters, hyphens, and spaces allowed. Minimum 7 characters."
-              />
-
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                required
-                title="Please enter a valid email address."
-                placeholder="william@gmail.com"
-              />
-
-              <label for="phone">Phone:</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                autocomplete="tel"
-                required
-                title="Please enter a valid phone number."
-                placeholder="(123) 456-7890"
-              />
-
-              <label for="organization">Business/Organization Name</label>
-              <input
-                type="text"
-                id="organization"
-                name="organization"
-                title="Enter your business or organization's name"
-                autocomplete="organization"
-                required
-              />
-
-              <label for="membership">Select Membership Level</label>
-              <select id="membership" name="membership" required>
-                <option value="" disabled selected>
-                  Choose a membership level
-                </option>
-                <option value="np">NP Membership (No Fee - Non-Profit)</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-              </select>
-
-              <label for="description">Business/Organization Description</label>
-              <textarea
-                id="description"
-                name="description"
-                title="Describe your business or organization"
-                rows="4"
-                cols="30"
-                required
-              ></textarea>
-
-              <input type="hidden" id="timestamp" name="timestamp" />
-              <button type="submit">Submit Application</button>
-            </form>
-
-            <!-- Membership Cards -->
-            <div class="membership-cards">
-              <div class="membership-card">
-                <h3>Non-Profit Membership</h3>
-                <p>Free membership for non-profit organizations</p>
-                <a href="#" class="membership-card-link" data-modal="npModal"
-                  >Learn More</a
-                >
-              </div>
-              <div class="membership-card">
-                <h3>Bronze Membership</h3>
-                <p>Entry-level membership with basic benefits</p>
-                <a
-                  href="#"
-                  class="membership-card-link"
-                  data-modal="bronzeModal"
-                  >Learn More</a
-                >
-              </div>
-              <div class="membership-card">
-                <h3>Silver Membership</h3>
-                <p>Enhanced benefits for growing businesses</p>
-                <a
-                  href="#"
-                  class="membership-card-link"
-                  data-modal="silverModal"
-                  >Learn More</a
-                >
-              </div>
-              <div class="membership-card">
-                <h3>Gold Membership</h3>
-                <p>Premium membership with comprehensive benefits</p>
-                <a href="#" class="membership-card-link" data-modal="goldModal"
-                  >Learn More</a
-                >
-              </div>
+        <link rel="stylesheet" href="styles/join.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script type="module" src="scripts/join.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="" />
+                </div>
+                <span class="brand-name">Bogotá Chamber of Commerce</span>
             </div>
-          </div>
+
+            <nav class="nav-menu">
+                <button
+                    class="hamburger"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-page="home">Home</a></li>
+                    <li>
+                        <a href="directory.html" data-page="about">Directory</a>
+                    </li>
+                    <li><a href="join.html" data-page="services">Join</a></li>
+                    <li>
+                        <a href="discover.html" data-page="contact">Discover</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Join the Bogotá Chamber of Commerce</h1>
+                <p>
+                    Grow your business and connect with a thriving network of
+                    entrepreneurs. Become a member today and access exclusive
+                    opportunities for development and success.
+                </p>
+            </div>
+            <img
+                src="images/baner.avif"
+                alt="Cámara de Comercio de Bogotá"
+                class="hero-image"
+            />
         </section>
-      </div>
 
-      <!-- Modals for Membership Levels -->
-      <div id="npModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <h2>Non-Profit Membership</h2>
-          <p>Benefits include:</p>
-          <ul>
-            <li>Free listing in community directory</li>
-            <li>Access to networking events</li>
-            <li>Monthly newsletter</li>
-          </ul>
-        </div>
-      </div>
+        <main>
+            <div class="main-content">
+                <!-- Sección de bienvenida -->
+                <section class="welcome-section">
+                    <div class="cta-container">
+                        <h2>Unlock New Opportunities!</h2>
+                        <p>
+                            Become part of a thriving network of over 10,000
+                            business leaders. Join the Chamber today and take
+                            your business to the next level! 🚀
+                        </p>
+                        <a href="#registration-form" class="cta-button"
+                            >Fill out the registration form</a
+                        >
+                    </div>
+                </section>
 
-      <div id="bronzeModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <h2>Bronze Membership</h2>
-          <p>Benefits include:</p>
-          <ul>
-            <li>Enhanced directory listing</li>
-            <li>Discounted event tickets</li>
-            <li>Basic marketing support</li>
-          </ul>
-        </div>
-      </div>
+                <!-- Sección de eventos actuales -->
+                <section class="events-section">
+                    <div class="membership-section">
+                        <form
+                            action="thankyou.html"
+                            method="get"
+                            id="registration-form"
+                        >
+                            <!-- Existing form inputs from original document -->
+                            <label for="first-name">First Name:</label>
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                autocomplete="given-name"
+                                required
+                                title="Please enter your first name."
+                            />
 
-      <div id="silverModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <h2>Silver Membership</h2>
-          <p>Benefits include:</p>
-          <ul>
-            <li>Priority directory listing</li>
-            <li>Free event tickets</li>
-            <li>Dedicated marketing support</li>
-            <li>Spotlight feature on website</li>
-          </ul>
-        </div>
-      </div>
+                            <label for="last-name">Last Name:</label>
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                autocomplete="family-name"
+                                required
+                                title="Please enter your last name."
+                            />
 
-      <div id="goldModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <h2>Gold Membership</h2>
-          <p>Benefits include:</p>
-          <ul>
-            <li>Premium directory listing</li>
-            <li>Unlimited event tickets</li>
-            <li>Comprehensive marketing package</li>
-            <li>Featured homepage spotlight</li>
-            <li>Exclusive networking opportunities</li>
-          </ul>
-        </div>
-      </div>
-    </main>
+                            <label for="title">Organizational Title:</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                autocomplete="organization-title"
+                                pattern="[A-Za-z\- ]{7,}"
+                                required
+                                title="Only letters, hyphens, and spaces allowed. Minimum 7 characters."
+                            />
 
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <h3>Bogota Chamber of Commerce</h3>
-          <p>Ave. Caracas Cra 24 B</p>
-          <p>Bogota, Colombia</p>
-          <p>info@bogotacoc.org</p>
-          <p>(677) 126-4500</p>
-        </div>
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                title="Please enter a valid email address."
+                                placeholder="william@gmail.com"
+                            />
 
-        <div class="social-media">
-          <a href="#" class="social-icon youtube">
-            <img src="images/youtube.png" alt="YouTube" />
-          </a>
-          <a href="#" class="social-icon twitter">
-            <img src="images/twitter.png" alt="Twitter" />
-          </a>
-          <a href="#" class="social-icon linkedin">
-            <img src="images/linkedin.png" alt="LinkedIn" />
-          </a>
-        </div>
-      </div>
+                            <label for="phone">Phone:</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                autocomplete="tel"
+                                required
+                                title="Please enter a valid phone number."
+                                placeholder="(123) 456-7890"
+                            />
 
-      <div class="project-info">
-        <p>WDD231 Class Project</p>
-        <p>William Melo</p>
-        <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
-        <p>Last Modification: <span id="lastUpdated"></span></p>
-      </div>
-    </footer>
-  </body>
+                            <label for="organization"
+                                >Business/Organization Name</label
+                            >
+                            <input
+                                type="text"
+                                id="organization"
+                                name="organization"
+                                title="Enter your business or organization's name"
+                                autocomplete="organization"
+                                required
+                            />
+
+                            <label for="membership"
+                                >Select Membership Level</label
+                            >
+                            <select id="membership" name="membership" required>
+                                <option value="" disabled selected>
+                                    Choose a membership level
+                                </option>
+                                <option value="np">
+                                    NP Membership (No Fee - Non-Profit)
+                                </option>
+                                <option value="bronze">
+                                    Bronze Membership
+                                </option>
+                                <option value="silver">
+                                    Silver Membership
+                                </option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+
+                            <label for="description"
+                                >Business/Organization Description</label
+                            >
+                            <textarea
+                                id="description"
+                                name="description"
+                                title="Describe your business or organization"
+                                rows="4"
+                                cols="30"
+                                required
+                            ></textarea>
+
+                            <input
+                                type="hidden"
+                                id="timestamp"
+                                name="timestamp"
+                            />
+                            <button type="submit">Submit Application</button>
+                        </form>
+
+                        <!-- Membership Cards -->
+                        <div class="membership-cards">
+                            <div class="membership-card">
+                                <h3>Non-Profit Membership</h3>
+                                <p>
+                                    Free membership for non-profit organizations
+                                </p>
+                                <a
+                                    href="#"
+                                    class="membership-card-link"
+                                    data-modal="npModal"
+                                    >Learn More</a
+                                >
+                            </div>
+                            <div class="membership-card">
+                                <h3>Bronze Membership</h3>
+                                <p>
+                                    Entry-level membership with basic benefits
+                                </p>
+                                <a
+                                    href="#"
+                                    class="membership-card-link"
+                                    data-modal="bronzeModal"
+                                    >Learn More</a
+                                >
+                            </div>
+                            <div class="membership-card">
+                                <h3>Silver Membership</h3>
+                                <p>Enhanced benefits for growing businesses</p>
+                                <a
+                                    href="#"
+                                    class="membership-card-link"
+                                    data-modal="silverModal"
+                                    >Learn More</a
+                                >
+                            </div>
+                            <div class="membership-card">
+                                <h3>Gold Membership</h3>
+                                <p>
+                                    Premium membership with comprehensive
+                                    benefits
+                                </p>
+                                <a
+                                    href="#"
+                                    class="membership-card-link"
+                                    data-modal="goldModal"
+                                    >Learn More</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Modals for Membership Levels -->
+            <div id="npModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Non-Profit Membership</h2>
+                    <p>Benefits include:</p>
+                    <ul>
+                        <li>Free listing in community directory</li>
+                        <li>Access to networking events</li>
+                        <li>Monthly newsletter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="bronzeModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Bronze Membership</h2>
+                    <p>Benefits include:</p>
+                    <ul>
+                        <li>Enhanced directory listing</li>
+                        <li>Discounted event tickets</li>
+                        <li>Basic marketing support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="silverModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Silver Membership</h2>
+                    <p>Benefits include:</p>
+                    <ul>
+                        <li>Priority directory listing</li>
+                        <li>Free event tickets</li>
+                        <li>Dedicated marketing support</li>
+                        <li>Spotlight feature on website</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="goldModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Gold Membership</h2>
+                    <p>Benefits include:</p>
+                    <ul>
+                        <li>Premium directory listing</li>
+                        <li>Unlimited event tickets</li>
+                        <li>Comprehensive marketing package</li>
+                        <li>Featured homepage spotlight</li>
+                        <li>Exclusive networking opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Bogota Chamber of Commerce</h3>
+                    <p>Ave. Caracas Cra 24 B</p>
+                    <p>Bogota, Colombia</p>
+                    <p>info@bogotacoc.org</p>
+                    <p>(677) 126-4500</p>
+                </div>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon youtube">
+                        <img src="images/youtube.webp" alt="YouTube" />
+                    </a>
+                    <a href="#" class="social-icon twitter">
+                        <img src="images/twitter.webp" alt="Twitter" />
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <img src="images/linkedin.webp" alt="LinkedIn" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <p>WDD231 Class Project</p>
+                <p>William Melo</p>
+                <p><span id="copyright"></span> Bogotá Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastUpdated"></span></p>
+            </div>
+        </footer>
+    </body>
 </html>

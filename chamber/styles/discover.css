@@ -1,0 +1,650 @@
+/* Reseteo y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    --color1: #1e4c7c;
+    --color2: #fff;
+    --color3: #181818;
+    --color4: rgb(252, 255, 84);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--color3);
+}
+
+/* Logo and brand container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color2);
+}
+
+/* Navigation styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+/* Active page indicator */
+.nav-links a.active {
+    color: var(--color4);
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color4);
+    animation: underline 0.3s ease forwards;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color2);
+    transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--color3);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 50;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.title p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.desktop-nav ul li {
+    margin-left: 1.5rem;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle,
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Oculto en desktop, visible en móvil */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.hero {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.6
+    ); /* Esto oscurece la imagen (0.5 es el nivel de opacidad) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay h1 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 3rem;
+}
+
+.hero-overlay p {
+    color: white;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.keynote-button {
+    position: absolute;
+    left: 92%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+/* Main Content */
+main {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+}
+
+/* Add these styles to your existing discover.css */
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #e9e9e9; /* Light background for sidebar */
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    grid-area: sidebar; /* Assign grid area name */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: var(--color1);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--color4);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#visit-message {
+    font-style: italic;
+    color: #555;
+}
+
+/* Grid Layout Setup */
+main {
+    display: grid;
+    gap: 1.5rem;
+    /* Define grid areas for different screen sizes */
+    grid-template-areas:
+        "sidebar"
+        "content";
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-area: content; /* Assign grid area name */
+}
+
+/* Card Styles */
+.discover-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card figure {
+    margin: 0;
+    position: relative; /* Needed for potential hover effects */
+    height: 200px; /* Fixed height for consistency */
+    overflow: hidden;
+}
+
+.discover-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area nicely */
+    transition: transform 0.3s ease-in-out; /* Base for hover effect */
+}
+
+.discover-card-content {
+    padding: 1rem;
+    flex-grow: 1; /* Allows content to fill space */
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--color1);
+}
+
+.discover-card address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.discover-card p {
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Pushes button to bottom */
+    font-size: 0.95rem;
+}
+
+.discover-card button {
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the start */
+}
+
+.discover-card button:hover {
+    background-color: #173d5e; /* Darker shade on hover */
+}
+
+/* Image Hover Effect (Not on Mobile) */
+@media (hover: hover) and (min-width: 641px) {
+    /* Apply only on devices that support hover and larger screens */
+    .discover-card figure:hover img {
+        transform: scale(1.05); /* Example effect: slight zoom */
+    }
+}
+
+/* Grid Area Layouts for Different Screen Sizes */
+
+/* Small screens (320px - 640px) - Default: Sidebar above, single column cards */
+.discover-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Medium screens (641px - 1024px) */
+@media (min-width: 641px) {
+    main {
+        grid-template-columns: 250px 1fr; /* Sidebar fixed width, content takes rest */
+        grid-template-areas: "sidebar content";
+    }
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+    main {
+        grid-template-columns: 300px 1fr; /* Wider sidebar */
+        grid-template-areas: "sidebar content";
+    }
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+}
+
+/* Dark Mode Adjustments if needed */
+body.dark-mode .sidebar {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode #visit-message {
+    color: #ccc;
+}
+
+body.dark-mode .discover-card {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .discover-card address,
+body.dark-mode .discover-card p {
+    color: #ddd;
+}
+
+/* Make sure the rest of your discover.css styles are present */
+/* Include header, footer, general body styles etc. */
+
+/* Footer */
+footer {
+    background-color: #e9e9e9;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-bottom: 1rem;
+}
+
+.contact-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.social-icon img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.project-info {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 1200px;
+    margin: 1rem auto 0;
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 768px) {
+    /* Header */
+
+    .logo-container img {
+        width: auto;
+        height: 40px;
+    }
+
+    .title h1 {
+        font-size: 1.3rem;
+    }
+
+    .title p {
+        font-size: 0.8rem;
+    }
+
+    .desktop-nav {
+        display: none; /* Ocultar navegación desktop */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón de menú hamburguesa */
+    }
+
+    /* Hero */
+    .hero {
+        height: 150px;
+    }
+
+    .hero-overlay h1 {
+        padding-top: 20x;
+        font-size: 1.5rem;
+    }
+
+    .hero-overlay p {
+        padding-top: 20x;
+        font-size: 1rem;
+    }
+
+    .keynote-button {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: 10px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Main Content */
+    main {
+        padding: 0.8rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+        margin: 0.8rem 0;
+    }
+
+    /* Info Panels */
+    .info-panels {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Business Cards */
+    .business-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card-content {
+        display: flex;
+    }
+
+    .business-image {
+        flex: 0 0 80px;
+        height: 80px;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .business-details {
+        flex: 1;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    .project-info {
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode .panel,
+body.dark-mode .business-card,
+body.dark-mode footer {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode .panel h3 {
+    background-color: #222;
+}
+
+body.dark-mode .business-card h3,
+body.dark-mode .tagline {
+    background-color: #555;
+}
+
+body.dark-mode .mobile-menu {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .mobile-menu ul li a {
+    color: #f4f4f4;
+    border-color: #444;
+}
+
+body.dark-mode .project-info {
+    color: #ccc;
+    border-color: #444;
+}
